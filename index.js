@@ -1,6 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
-import userRoutes from "./Routes/user.js";
+import userRoutes from "./Routes/user.js"; 
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -23,7 +23,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/Auth")
     .catch((err) => { console.log("Error ",err) });
 
 // Routes
-app.use(userRoutes);
+app.use("/",userRoutes); 
 
 // Start the server
 app.listen(port, () => {
