@@ -11,11 +11,11 @@ const port = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Set EJS as the view engine
-app.set('view engine', 'ejs');
-// Specify the directory where your views are located
-const __dirname = dirname(fileURLToPath(import.meta.url));
-app.set('views', join(__dirname, 'views'));
+// // Set EJS as the view engine
+// app.set('view engine', 'ejs');
+// // Specify the directory where your views are located
+// const __dirname = dirname(fileURLToPath(import.meta.url));
+// app.set('views', join(__dirname, 'views'));
 
 // Connect to MongoDB
 mongoose.connect("mongodb://127.0.0.1:27017/Auth")
